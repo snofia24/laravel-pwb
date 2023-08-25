@@ -24,12 +24,3 @@ Route::get('/form ', function () {
 Route::get('/welcome', function () {
     return view('user.welcome');
 });
-
-Route::get('/from', function () {
-    return view('user.from');
-});
-
-Route::get('/welcome', function () {
-    return view('user.welcome');
-});
-
