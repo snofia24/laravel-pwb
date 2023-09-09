@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('user.index');
+//});
+
+//Route::get('/form ', function () {
+    //return view('user.form');
+//});
+
+//Route::get('/welcome', function () {
+ //   return view('user.welcome');
+//});
+
 Route::get('/', function () {
-    return view('user.index');
-});
-
-Route::get('/form ', function () {
-    return view('user.form');
-});
-
-Route::get('/welcome', function () {
-    return view('user.welcome');
+        return view ('layout.master');
 });
