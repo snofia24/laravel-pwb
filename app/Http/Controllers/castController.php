@@ -43,7 +43,7 @@ class CastController extends Controller
             'umur' => $request['umur'],
             'bio' => $request['bio'],
         ]);
-
+ 
         return redirect('/cast');
     }
 

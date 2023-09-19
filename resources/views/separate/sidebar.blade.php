@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="" class="brand-link">
       <img src="{{ asset('admin/dist/img/AdminLTELogo.png') }}" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Perpustakaan</span>
+      <span class="brand-text font-weight-light">Movie</span>
     </a>
   
     <!-- Sidebar -->
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{route('cast.create')}}" class="nav-link">
+            <a href="/cast/create" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Form Cast
@@ -41,21 +41,14 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="" class="nav-link">
+            <a href="/genre/create" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Form Buku
+                Form Genre
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
-              <p>
-                Form Petugas
-              </p>
-            </a>
-          </li>
+          
   
       </nav>
       <!-- /.sidebar-menu -->

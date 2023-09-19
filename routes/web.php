@@ -36,4 +36,4 @@ Route::get('/', function () {
 Route::resource('/genre', GenreController::class);
 
 // For CRUD table cast
-Route::resource('/cast', castController::class);
+Route::resource('/cast', castController::class);  
