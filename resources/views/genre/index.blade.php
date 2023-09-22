@@ -1,4 +1,6 @@
 @extends('layout.master')
+@section('title','data genre')
+@section('content')
 @push('css')
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
@@ -49,22 +51,18 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @forelse ($genres as $key => $values)
+                                                @forelse ($genres as $key => $value)
                                                     <tr>
                                                         <td>{{ $key + 1 }}</td>
-                                                        <td>{{ $values->nama }}</td>
+                                                        <td>{{ $value->nama }}</td>
                                                         <td>
-                                                            <form action="{{ route('genre.destroy', $values->id) }}"
+                                                            <form action="{{ route('genre.destroy', $value->id) }}"
                                                                 method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <a href="{{ route('genre.edit', $values->id) }}"
-                                                                    class="btn-sm btn-warning">
-                                                                    <i class="fas fa-edit"></i>Edit
-                                                                </a>
-                                                                <button class="btn-sm btn-danger">
-                                                                    <i class="fas fa-trash-alt"></i>Hapus
-                                                                </button>
+                                                            <a href="{{ route('genre.show', $value->id)}}" class="btn-sm btn-info">Show</a>
+                                                            <a href="{{ route('genre.edit', $value->id)}}" class="btn-sm btn-warning">Edit</a>
+                                                            <button class="btn-sm btn-danger">Delete</a>
                                                             </form>
                                                         </td>
                                                     </tr>

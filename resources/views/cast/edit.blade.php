@@ -44,14 +44,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="umur">Umur</label>
-                                    <input type="text" class="form-control" name="nama" id="umur" placeholder="" value="{{ $casts[0]->umur }}">
+                                    <input type="text" class="form-control" name="umur" id="umur" placeholder="" value="{{ $casts[0]->umur }}">
                                     @error('umur')
                                     <div class="alert alert-danger mt-1">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Bio</label>
-                                    <textarea class="form-control" rows="5" placeholder="Ketik Bio">{{ $casts[0]->bio }}</textarea>
+                                    <textarea name="bio" class="form-control" rows="5" placeholder="Ketik Bio">{{ $casts[0]->bio }}</textarea>
                                     
                                 </div>
                             </div>

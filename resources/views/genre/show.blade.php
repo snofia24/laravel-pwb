@@ -1,56 +1,55 @@
-@extends('layouts.master')
-
+@extends('layout.master')
+@section('title', 'detail genre')
 @section('content')
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1>General Form</h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">General Form</li>
-          </ol>
-        </div>
-      </div>
-    </div><!-- /.container-fluid -->
-  </section>
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Detail Genre</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Genre</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-  <!-- Main content -->
-  <section class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">Tambah Data Cast</h3>
-            </div>
-            <!-- /.card-header -->
-            <!-- form start -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Genre</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
               <div class="card-body">
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" name="nama" id="nama" class="form-control" placeholder="Enter Nama" value="{{ $cast[0]->nama }}" disabled>
+                  <input type="text" name="nama" id="nama" class="form-control" placeholder="Enter nama" value="{{ $genres->nama }}" disabled>
                 </div>
                 <div class="form-group">
                   <label for="umur">Umur</label>
-                  <input type="number" name="umur" id="umur" class="form-control" placeholder="Enter Umur" value="{{ $cast[0]->umur }}"" disabled>
+                  <input type="number" name="umur" id="umur" class="form-control" placeholder="Enter Umur" value="{{ $genres->umur }}" disabled>
                 </div>
                 <div class="form-group">
                   <label for="bio">Biografi</label>
-                  <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Input Biografi" disabled>{{ $cast[0]->bio }}</textarea>
+                  <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Input Biografi" disabled>{{ $genres->bio }}</textarea>
                 </div>
               </div>
               <!-- /.card-body -->
 
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
+                <a href="{{ route('genre.index') }}" class="btn btn-primary">Back</a>
+            </div>
           </div>
           <!-- /.card -->
         </div>

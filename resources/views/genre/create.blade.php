@@ -35,8 +35,6 @@
                         @error('nama')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
-                    </div>
-
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>

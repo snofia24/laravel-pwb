@@ -37,17 +37,17 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="nama">Nama</label>
-                                <input type="text" class=" form-control" name="nama" id="nama" placeholder="Masukan Nama" value="{{ $cast[0]->nama }}" disabled>
+                                <input type="text" class=" form-control" name="nama" id="nama" placeholder="Masukan Nama" value="{{ $casts[0]->nama }}" disabled>
                             </div>
                                 
                             <div class="form-group">
                                 <label for="umur">umur</label>
-                                <input type="number" class="form-control" name="umur" id="umur" placeholder="umur" value="{{ $cast[0]->umur }}" disabled>
+                                <input type="number" class="form-control" name="umur" id="umur" placeholder="umur" value="{{ $casts[0]->umur }}" disabled>
                             </div>
 
                             <div class="form-group">
                                 <label for="bio">Biografi</label>
-                                <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Enter Biografi" disabled>{{ $cast[0]->bio }}</textarea>
+                                <textarea name="bio" id="bio" cols="30" rows="10" class="form-control" placeholder="Enter Biografi" disabled>{{ $casts[0]->bio }}</textarea>
                             </div>
 
 
