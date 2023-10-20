@@ -10,4 +10,9 @@ class genre extends Model
     use HasFactory;
     protected $table = 'genres';
     protected $fillable = ['nama'];
+
+    public function film()
+    {
+        return $this->belongTo('App/Models/Film');
+    }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CastController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FilmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,8 @@ use App\Http\Controllers\AuthController;
 
 
 Route::resource('/genre', GenreController::class);
-
-// For CRUD table cast
 Route::resource('/cast', CastController::class);
+Route::resource('/film', FilmController::class);
 
 Route::controller(AuthController::class)->group(function() {
     // register form
