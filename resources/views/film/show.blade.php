@@ -110,6 +110,8 @@
                 <div class="tab-content">
                   <div class="active tab-panel" id="activity">
                     <!-- Post -->
+                    @foreach ($kritiks as $kritik)
+                  
                     <div class="post">
                       <div class="user-block">
                         <img class="img-circle img-bordered-sm" src="{{ asset('admin/dist/img/user1-128x128.jpg') }}" alt="user image">

@@ -7,6 +7,8 @@ use App\Http\Controllers\GenreController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\PeranController;
+use App\Http\Controllers\KritikController;
+
 
 
 /*
@@ -27,8 +29,13 @@ use App\Http\Controllers\PeranController;
 Route::resource('/genre', GenreController::class);
 Route::resource('/cast', CastController::class);
 Route::resource('/film', FilmController::class);
+
+
 Route::get('film/{film}/peran/create', [PeranController::class,'create'])->name('peran.create')->middleware('auth');
 Route::post('film/{film}/peran', [PeranController::class,'store'])->name('peran.store')->middleware('auth');
+
+Route::get('film/{film}/kritik/create', [kritikController::class,'create'])->name('kritik.create')->middleware('auth');
+Route::post('film/{film}/kritik', [kritikController::class,'store'])->name('kritik.store')->middleware('auth');
 
 Route::controller(AuthController::class)->group(function() {
     // register form

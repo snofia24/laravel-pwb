@@ -25,7 +25,7 @@ class AuthController extends Controller
     }
 
     // store register
-    public function store(Request $request, User $user)
+    public function store(Request $request, User $user, Auth $auth)
     {
         $request->validate([
             'name' => 'required|string',

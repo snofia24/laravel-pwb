@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Film;
 use App\Models\Kritik;
+use App\Models\User;
+use App\Models\Peran;
 use Illuminate\Http\Request;
 
 class KritikController extends Controller
@@ -18,17 +21,33 @@ class KritikController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Film $film, User $user)
     {
         //
+        $users      =   $user->all();
+        $datafilm   =   $film->where('id', 'name')->get();
+        return view("kritik.create", compact('users', 'datafilm'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, Peran $peran, $id)
     {
         //
+        $request->validate([
+            'content'   => 'required',
+            'point'     => 'required',
+        ]);
+
+        Kritik::create([
+            'user_id'   => $request['user_id'],
+            'film_id'   => $request['film_id'],
+            'content'   => $request['content'],
+            'point'     => $request['point']
+        ]);
+
+        return redirect()->route('film.show', $id);
     }
 
     /**
