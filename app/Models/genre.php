@@ -13,6 +13,6 @@ class genre extends Model
 
     public function film()
     {
-        return $this->belongTo('App/Models/Film');
+        return $this->belongsTo('App/Models/Film');
     }
 }

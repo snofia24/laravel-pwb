@@ -22,4 +22,9 @@ class Film extends Model
     {
         return $this->hasMany('App\Models\Genre','id','genre_id');
     }
+
+    public function peran()
+    {
+        return $this->hasMany(peran::class);
+    }
 }

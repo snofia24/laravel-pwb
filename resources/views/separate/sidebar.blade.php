@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/film" class="nav-link @if (Request::segment(1) == 'cast') active @endif">
+            <a href="/film" class="nav-link @if (Request::segment(1) == 'film') active @endif">
               <i class="far fa-circle nav-icon "></i>
               <p>film</p>
             </a>

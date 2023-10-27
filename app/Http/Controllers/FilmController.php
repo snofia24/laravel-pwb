@@ -12,7 +12,7 @@ class FilmController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Film $film)
     {
         $films = Film::all();
         return view('film.index', compact('films'));
@@ -44,13 +44,15 @@ class FilmController extends Controller
         $result = CloudinaryStorage::upload($image->getRealPath(),
         $image->getClientOriginalName());
 
-        $film::create([
+        Film::create([
             'judul' => $request['judul'],
             'genre_id' => $request['genre'],
             'tahun' => $request['tahun'],
             'ringkasan' => $request['ringkasan'],
             'poster' => $result
         ]);
+
+        return redirect()->route('film.index')->withSuccess('film telah di tambahkan');
     }
 
     /**
@@ -58,7 +60,7 @@ class FilmController extends Controller
      */
     public function show(Film $film)
     {
-        //
+        return view('film.show', compact('film'));
     }
 
     /**

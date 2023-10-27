@@ -44,7 +44,7 @@ class CastController extends Controller
             'bio' => $request['bio'],
         ]);
  
-        return redirect('/siswa');
+        return redirect('cast');
     }
 
     /**
